@@ -2,59 +2,72 @@
   <img width="60px" height="60px" src="https://marked.js.org/img/logo-black.svg" align="right" />
 </a>
 
-# Marked
+# Marked Clone – TSIS 1 Subtask 2
 
-[![npm](https://badgen.net/npm/v/marked)](https://www.npmjs.com/package/marked)
-[![install size](https://badgen.net/packagephobia/install/marked)](https://packagephobia.now.sh/result?p=marked)
-[![downloads](https://badgen.net/npm/dt/marked)](https://www.npmjs.com/package/marked)
-[![github actions](https://github.com/markedjs/marked/workflows/Tests/badge.svg)](https://github.com/markedjs/marked/actions)
-[![snyk](https://snyk.io/test/npm/marked/badge.svg)](https://snyk.io/test/npm/marked)
+This project was created by **Zhumanova Zhanel (ID: 22B030544)** as part of the *Introduction to Open Source* course, TSIS 1 Subtask 2.  
+It is a student clone of **Marked**, a lightweight open-source Markdown parser written in JavaScript.  
+The goal of this task is to demonstrate understanding of open-source project documentation and contribution guidelines.
 
-- ⚡ built for speed
-- ⬇️ low-level compiler for parsing markdown without caching or blocking for long periods of time
-- ⚖️ light-weight while implementing all markdown features from the supported flavors & specifications
-- 🌐 works in a browser, on a server, or from a command line interface (CLI)
+---
+
+## Prompt
+A clone of “Marked” — a lightweight, open-source Markdown parser written in JavaScript with a simple web interface, README, and contribution guideline.
+
+## Firebase Link
+https://marked-clone-demo.web.app
+
+## GitHub Link
+https://github.com/zhanelzh/marked-clone
+
+---
+
+## Project Description
+**Marked Clone** is a simplified educational version of the original open-source project *Marked*.  
+It allows users to write Markdown text and instantly see it rendered into HTML, directly in the browser.  
+The project demonstrates the use of open-source tools, documentation standards, and contribution processes.
+
+---
+
+## Features
+- ⚡ Built for speed and simplicity  
+- 🧩 Parses Markdown and outputs HTML instantly  
+- 🌐 Works directly in the browser  
+- 🎨 Minimal and lightweight design  
+
+---
 
 ## Demo
+You can try the original [Marked demo page](https://marked.js.org/demo/)  
+or test this clone by opening the included `index.html` file in your browser.
 
-Checkout the [demo page](https://marked.js.org/demo/) to see marked in action ⛹️
-
-## Docs
-
-Our [documentation pages](https://marked.js.org) are also rendered using marked 💯
-
-Also read about:
-
-* [Options](https://marked.js.org/using_advanced)
-* [Extensibility](https://marked.js.org/using_pro)
-
-## Compatibility
-
-**Node.js:** Only [current and LTS](https://nodejs.org/en/about/releases/) Node.js versions are supported. End of life Node.js versions may become incompatible with Marked at any point in time.
-
-**Browser:** Not IE11 :)
+---
 
 ## Installation
+You can install the original **Marked** package using npm:
 
-**CLI:**
-
-```sh
-npm install -g marked
-```
-
-**In-browser:**
-
-```sh
+```bash
 npm install marked
+
 ```
 
 ## Usage
 
-### Warning: 🚨 Marked does not [sanitize](https://marked.js.org/using_advanced#options) the output HTML. Please use a sanitize library, like [DOMPurify](https://github.com/cure53/DOMPurify) (recommended), [sanitize-html](https://github.com/apostrophecms/sanitize-html) or [insane](https://github.com/bevacqua/insane) on the *output* HTML! 🚨
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Marked Clone Demo</title>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script>
+      document.getElementById('content').innerHTML =
+        marked.parse('# Hello from Marked Clone!\\n\\nThis text is **rendered** by our open-source project.');
+    </script>
+  </body>
+</html>
 
-```
-DOMPurify.sanitize(marked.parse(`<img src="x" onerror="alert('not happening')">`));
-```
 
 **CLI**
 
@@ -72,34 +85,29 @@ $ cat hello.html
 $ marked --help
 ```
 
-**Browser**
+**Project Structure**
 
-```html
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Marked in the browser</title>
-</head>
-<body>
-  <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-  <script>
-    document.getElementById('content').innerHTML =
-      marked.parse('# Marked in the browser\n\nRendered by **marked**.');
-  </script>
-</body>
-</html>
-```
-or import esm module
+/src             → JavaScript source files
+/public          → Static assets (HTML, CSS)
+/README.md       → Documentation file
+/CONTRIBUTING.md → Guidelines for contributors
+/package.json    → NPM configuration file
 
-```html
-<script type="module">
-  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-  document.getElementById('content').innerHTML =
-    marked.parse('# Marked in the browser\n\nRendered by **marked**.');
-</script>
-```
+# Contributing to this project
+
+Thanks for your interest! This is a small student project clone for a class task.
+
+How you can help:
+- **Testers / non-coders:** Open the site, try features, and post bugs in Issues.
+- **Coders:** Look for issues labeled `good first issue`. Please open a PR with a clear description.
+- **Translators:** Help translate README or UI strings.
+
+Getting started:
+1. Fork the repo and open a PR.
+2. Write a short description of your change.
+3. Keep changes small and focused.
+
+Please keep license and attribution intact.
 
 ## License
 
