@@ -13,11 +13,7 @@ The goal of this task is to demonstrate understanding of open-source project doc
 ## Prompt
 A clone of “Marked” — a lightweight, open-source Markdown parser written in JavaScript with a simple web interface, README, and contribution guideline.
 
-## Firebase Link
-https://marked-clone-demo.web.app
 
-## GitHub Link
-https://github.com/zhanelzh/marked-clone
 
 ---
 
